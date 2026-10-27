@@ -32,9 +32,17 @@ It also keeps the screen awake while a song is open, counts you in, loops a sect
 
 **How it's built:** a home-screen web app (React, TypeScript, Web Audio, IndexedDB) plus a helper on a Mac for the heavy work. Demucs splits a song into parts, Whisper times every word against the vocals, librosa finds the beat, and a pitch shifter (Signalsmith Stretch) keeps slowed-down parts in key. Songs, versions and backing parts are kept on the iPad, so a saved song plays while the Mac sleeps.
 
-### Gemlight (coming)
+### [Gemlight](https://gemlight.zlex.me)
 
-A puzzle game of punched card: nine pieces, a frame of 36 squares and ten gem marks. Fit every piece so each gem shows through a hole and lights up, with no two pieces of one colour touching. Every puzzle has exactly one solution: a Daily for everyone, a Journey from easy to hard, Endless, and a Race for two on one screen. Free, no account, plays offline. Coming to gemlight.zlex.me first, then Google Play.
+A puzzle game of punched card: nine pieces, a frame of 36 squares and ten gem marks. Fit every piece so each gem shows through a hole and lights up, with no two pieces of one colour touching. Every puzzle has exactly one solution: a Daily for everyone, a Journey from easy to hard, Endless, and a Race for two on one screen. Free, no account, plays offline. **Play it at [gemlight.zlex.me](https://gemlight.zlex.me)**; Google Play is next.
+
+![Gemlight on an iPad, today's Daily mid-game: six pieces in the frame with gem marks lit through their holes, three pieces left in the tray](images/gemlight-ipad.jpg)
+
+<p align="center">
+  <img src="images/gemlight-phone-home.jpg" width="300" alt="Gemlight's home on a phone: Play today's puzzle, How to play, then Journey, Endless, Race and Past days">
+  &nbsp;&nbsp;
+  <img src="images/gemlight-phone-game.jpg" width="300" alt="The Daily on a phone: pieces in the frame with their gems lit, the rest in the tray below">
+</p>
 
 **How it's built:** a static TypeScript web app. Its generator makes the puzzles and its solver proves each one has a single solution; a service worker keeps it playable offline.
 
