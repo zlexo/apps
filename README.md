@@ -3,7 +3,7 @@
 Games and apps for general use, each on its own address and made to live on an iPad or phone home screen.
 One start page lists them; this repo shows what each one does, how they're hosted and what's next.
 
-![Strum on an iPad, playing Home on the Range: chord cards with finger diagrams along the top, the chorus line lit word by word as it's sung, the strumming pattern and the beat beside the cards](images/strum-player.png)
+![Strum on an iPad, playing Home on the Range: chord cards with finger diagrams along the top, the chorus line lit word by word as it's sung, the strumming pattern and the beat beside the cards](images/strum-player.jpg)
 
 ## The apps
 
@@ -20,14 +20,14 @@ A guitar songbook, laid out for the iPad. **Private for now; a public version is
 
 It also keeps the screen awake while a song is open, counts you in, loops a section, and opens without a connection.
 
-![The mixer over a playing song: presets (whole song, just vocals, melody guide, no vocals, no guitar, your mix), a volume for each part and the speed at 80%](images/strum-mixer.png)
+![The mixer over a playing song: presets (whole song, just vocals, melody guide, no vocals, no guitar, your mix), a volume for each part and the speed at 80%](images/strum-mixer.jpg)
 
-![Strum's home on an iPad: a favourites shelf, set lists shown as four-song covers, and every song as a card](images/strum-home.png)
+![Strum's home on an iPad: a favourites shelf, set lists shown as the covers of their first four songs, and every song as a card with its album cover](images/strum-home.jpg)
 
 <p align="center">
-  <img src="images/strum-phone-songs.png" width="300" alt="Strum on a phone: search, set lists and songs in one column">
+  <img src="images/strum-phone-songs.jpg" width="300" alt="Strum on a phone: search, set lists and songs in one column">
   &nbsp;&nbsp;
-  <img src="images/strum-phone-set-list.png" width="300" alt="A set list called Campfire on a phone: five songs in order with Play, Add songs and Edit">
+  <img src="images/strum-phone-set-list.jpg" width="300" alt="A set list called Campfire on a phone: five songs in order with Play, Add songs and Edit">
 </p>
 
 **How it's built:** a home-screen web app (React, TypeScript, Web Audio, IndexedDB) plus a helper on a Mac for the heavy work. Demucs splits a song into parts, Whisper times every word against the vocals, librosa finds the beat, and a pitch shifter (Signalsmith Stretch) keeps slowed-down parts in key. Songs, versions and backing parts are kept on the iPad, so a saved song plays while the Mac sleeps.
