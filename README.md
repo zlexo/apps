@@ -32,13 +32,15 @@ It also keeps the screen awake while a song is open, counts you in, loops a sect
 
 **How it's built:** a home-screen web app (React, TypeScript, Web Audio, IndexedDB) plus a helper on a Mac for the heavy work. Demucs splits a song into parts, Whisper times every word against the vocals, librosa finds the beat, and a pitch shifter (Signalsmith Stretch) keeps slowed-down parts in key. Songs, versions and backing parts are kept on the iPad, so a saved song plays while the Mac sleeps.
 
-### A puzzle game (coming)
+### Gemlight (coming)
 
-A puzzle game of its own: its own name, its own look and generated puzzles, free and offline. It will be the first public game here and the first one on Google Play. Name and screenshots come with the game.
+A puzzle game of punched card: nine pieces, a frame of 36 squares and ten gem marks. Fit every piece so each gem shows through a hole and lights up, with no two pieces of one colour touching. Every puzzle has exactly one solution: a Daily for everyone, a Journey from easy to hard, Endless, and a Race for two on one screen. Free, no account, plays offline. Coming to gemlight.zlex.me first, then Google Play.
+
+**How it's built:** a static TypeScript web app. Its generator makes the puzzles and its solver proves each one has a single solution; a service worker keeps it playable offline.
 
 ### apps.zlex.me, the start page
 
-One address for everything: a tile per app with its icon, its name and a line about it, opening the app at its own address. Each app keeps its own home-screen icon and its own progress, so the start page is where you find the apps, not where you play them. It opens to everyone with the first public game; private apps stay on it, marked Private.
+One address for everything: a tile per app with its icon, its name and a line about it, opening the app at its own address. Each app keeps its own home-screen icon and its own progress, so the start page is where you find the apps, not where you play them. It opens to everyone with Gemlight; private apps stay on it, marked Private.
 
 **How it's built:** plain HTML, CSS and JavaScript, no framework and no build step. One data file lists the apps.
 
@@ -56,12 +58,12 @@ Hosting all of it costs nothing today.
 ## On the iPad and phone
 
 - **Home-screen web apps, now.** Open an app in Safari, then Share › Add to Home Screen: it gets its own icon, opens full screen and works offline. Home-screen web apps can also send notifications and badge their icon (iOS and iPadOS 16.4 and later).
-- **Store apps, in steps.** Google Play first, for the puzzle game, which can ship there as the same web app (a Trusted Web Activity). The App Store only for an app with real native parts: Apple turns down apps that are a web page in a wrapper.
+- **Store apps, in steps.** Google Play first, for Gemlight, which can ship there as the same web app (a Trusted Web Activity). The App Store only for an app with real native parts: Apple turns down apps that are a web page in a wrapper.
 
 ## What's next
 
 - **apps.zlex.me opens to everyone:** the public games and apps on one page, private ones marked Private.
-- **The puzzle game:** its name and look, then the web, then Google Play.
+- **Gemlight:** on the web first, then Google Play.
 - **A public Strum:** being planned, including what it takes to split songs for everyone instead of on one Mac.
 - **No accounts to start:** progress stays on each device. Sign-in comes only when an app needs it, to sync between devices or to play together.
 - **Each new game or app** starts as a written concept, gets its own subdomain and lands on the start page as one tile.
