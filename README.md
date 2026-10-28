@@ -1,7 +1,7 @@
 # apps.zlex.me
 
 Games and apps for general use, each on its own address and made to live on an iPad or phone home screen.
-One start page lists them; this repo shows what each one does, how they're hosted and what's next.
+[apps.zlex.me](https://apps.zlex.me) lists them; this repo shows what each one does, how they're hosted and what's next.
 
 ![Strum on an iPad, playing Home on the Range: chord cards with finger diagrams along the top, the chorus line lit word by word as it's sung, the strumming pattern and the beat beside the cards](images/strum-player.jpg)
 
@@ -34,7 +34,7 @@ It also keeps the screen awake while a song is open, counts you in, loops a sect
 
 ### [Gemlight](https://gemlight.zlex.me)
 
-A puzzle game of punched card: nine pieces, a frame of 36 squares and ten gem marks. Fit every piece so each gem shows through a hole and lights up, with no two pieces of one colour touching. Every puzzle has exactly one solution: a Daily for everyone, a Journey from easy to hard, Endless, and a Race for two on one screen. Free, no account, plays offline. **Play it at [gemlight.zlex.me](https://gemlight.zlex.me)**; Google Play is next.
+A puzzle game: nine pieces with holes in them, a frame of 36 squares and ten gem marks. Fit every piece so each gem shows through a hole and lights up, with no two pieces of one colour touching. Every puzzle has exactly one solution: a Daily for everyone, a Journey from easy to hard, Endless, and a Race for two on one screen. Free, no account, plays offline. **Play it at [gemlight.zlex.me](https://gemlight.zlex.me)**; Google Play is next.
 
 ![Gemlight on an iPad, today's Daily mid-game: six pieces in the frame with gem marks lit through their holes, three pieces left in the tray](images/gemlight-ipad.jpg)
 
@@ -46,9 +46,9 @@ A puzzle game of punched card: nine pieces, a frame of 36 squares and ten gem ma
 
 **How it's built:** a static TypeScript web app. Its generator makes the puzzles and its solver proves each one has a single solution; a service worker keeps it playable offline.
 
-### apps.zlex.me, the start page
+### [apps.zlex.me](https://apps.zlex.me), the start page
 
-One address for everything: a tile per app with its icon, its name and a line about it, opening the app at its own address. Each app keeps its own home-screen icon and its own progress, so the start page is where you find the apps, not where you play them. It opens to everyone with Gemlight; private apps stay on it, marked Private.
+One address for everything: a tile per app with its icon, its name and a line about it, opening the app at its own address. Each app keeps its own home-screen icon and its own progress, so the start page is where you find the apps, not where you play them. It's open to everyone; private apps stay on it, marked Private, behind their own sign-in.
 
 **How it's built:** plain HTML, CSS and JavaScript, no framework and no build step. One data file lists the apps.
 
@@ -70,8 +70,7 @@ Hosting all of it costs nothing today.
 
 ## What's next
 
-- **apps.zlex.me opens to everyone:** the public games and apps on one page, private ones marked Private.
-- **Gemlight:** on the web first, then Google Play.
+- **Gemlight on Google Play:** the same web app, packaged for Android.
 - **A public Strum:** being planned, including what it takes to split songs for everyone instead of on one Mac.
 - **No accounts to start:** progress stays on each device. Sign-in comes only when an app needs it, to sync between devices or to play together.
 - **Each new game or app** starts as a written concept, gets its own subdomain and lands on the start page as one tile.
