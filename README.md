@@ -46,6 +46,30 @@ A puzzle game: nine pieces with holes in them, a frame of 36 squares and ten gem
 
 **How it's built:** a static TypeScript web app. Its generator makes the puzzles and its solver proves each one has a single solution; a service worker keeps it playable offline.
 
+### [Planner](https://planner.zlex.me)
+
+A calendar you draw on, made for the iPad and its Pencil. Each month is a real sheet of boxes: write in them, draw across them, add stickers and washi tape, and give every page its own look. Free, no account, works offline. **Open it at [planner.zlex.me](https://planner.zlex.me).**
+
+- **Ink first.** The Pencil always draws, with pressure, and never selects or opens anything. Your palm does nothing. A finger taps a box to open that day, pinches to zoom and swipes to the next month.
+- **A look for every page.** 14 looks, from pink gingham and lilac clouds to plain paper. Change the paper, the boxes, the month name or the colour for one page, one month or every month. Ink and stickers take the page's colours, and the boxes never move.
+- **Year, Month, Week and Day,** plus loose pages: blank, lined, dots, grid, lists and a habit tracker.
+- **Stickers, tape, pictures and text,** with your own pictures as stickers or as the paper itself.
+- **Events and reminders.** Times, repeats and birthdays, as real notifications once it's on the Home Screen.
+- **Extras you switch on:** moods, habits, school deadlines, countdowns, moon phases, a sticker maker and more. A private one stays hidden until you ask, never shows on a saved page, and can be locked with a PIN.
+- **Yours to keep.** Any page saves as a picture or a PDF, and one backup file holds everything.
+
+![Planner on an iPad: December on pink gingham, with handwriting in the boxes, an arrow drawn across a week, washi tape over two days, stickers, and events such as Yoga 18:00 and Dentist 10:30](images/planner-ipad-month.jpg)
+
+![The look panel over a month: ten pretty looks and four plain ones, then the paper, the boxes, the month name and the colour, for this month or every month](images/planner-themes.jpg)
+
+<p align="center">
+  <img src="images/planner-phone-month.jpg" width="300" alt="Planner on a phone: the month in a plain typewriter look, marks under the days with something on them, and the coming events listed below">
+  &nbsp;&nbsp;
+  <img src="images/planner-phone-day.jpg" width="300" alt="A day opened on a phone: Friday, December 18 with a birthday, and buttons to add an event or open the day">
+</p>
+
+**How it's built:** a home-screen web app (React, TypeScript, Canvas 2D, IndexedDB). One renderer draws every page on screen, as a saved picture and as a PDF, so a saved page can't differ from what you see. A stroke is never edited, only added or erased, which is what lets two devices merge their ink once sync opens. A Cloudflare Worker with a small database sends the reminders.
+
 ### [apps.zlex.me](https://apps.zlex.me), the start page
 
 One address for everything: a tile per app with its icon, its name and a line about it, opening the app at its own address. Each app keeps its own home-screen icon and its own progress, so the start page is where you find the apps, not where you play them. It's open to everyone; private apps stay on it, marked Private, behind their own sign-in.
@@ -57,6 +81,7 @@ One address for everything: a tile per app with its icon, its name and a line ab
 ![How the apps are hosted: an iPad or phone opens public apps straight from static files on Cloudflare's free plan; private apps ask for a sign-in code from Cloudflare Access first, then reach a Mac at home through a tunnel, where the heavy work runs](images/hosting.svg)
 
 - **Static apps on Cloudflare's free plan.** The start page and the games are plain files served from Cloudflare's edge (Workers with static assets). Requests for static files are free and unlimited, so a game costs nothing to serve, however many people play it.
+- **A small server only where an app needs one.** Planner's reminders come from a Cloudflare Worker with a D1 database and a job that runs every minute. Without an account it keeps when to remind a device, never what about: the notification carries an id, and the device fills in the words when it arrives.
 - **Heavy work on a Mac, through a tunnel.** Splitting a song into parts and timing its words needs a real machine, so it runs on a Mac at home, reached through a Cloudflare Tunnel. The Mac makes the connection outward, so no port is open at home.
 - **Private apps behind Cloudflare Access.** A private app asks for a code sent to an email on its list, and one sign-in covers every private app. Public apps have no sign-in at all.
 - **One subdomain per app.** Each app has its own address, so each keeps its own storage, its own home-screen icon and its own offline copy.
