@@ -72,9 +72,9 @@ A calendar you draw on, made for the iPad and its Pencil. Each month is a real s
 
 ### [apps.zlex.me](https://apps.zlex.me), the start page
 
-One address for everything: a tile per app with its icon, its name and a line about it, opening the app at its own address. Each app keeps its own home-screen icon and its own progress, so the start page is where you find the apps, not where you play them. It's open to everyone; private apps stay on it, marked Private, behind their own sign-in.
+One address for everything: a tile per app with its icon, its name and a line about it, opening the app at its own address. Each app keeps its own home-screen icon and its own progress, so the start page is where you find the apps, not where you play them. It's open to everyone and shows the public apps. Signed in, you also see the private apps you have, marked Yours, and no others, so nobody is sent to a sign-in they can't pass. The rest are on a Showcase page with screenshots, next to a short form to ask for access.
 
-**How it's built:** plain HTML, CSS and JavaScript, no framework and no build step. One data file lists the apps.
+**How it's built:** plain HTML, CSS and JavaScript, no framework and no build step. One data file lists the apps. A small Cloudflare Worker answers who is signed in and takes the form's posts, behind a Turnstile check and a rate limit.
 
 ## How it's hosted
 
