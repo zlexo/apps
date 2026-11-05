@@ -111,7 +111,7 @@ One address for everything: a tile per app with its icon, its name and a line ab
 - **Static apps on Cloudflare's free plan.** The start page and the games are plain files served from Cloudflare's edge (Workers with static assets). Requests for static files are free and unlimited, so a game costs nothing to serve, however many people play it.
 - **A small server only where an app needs one.** Planner's reminders come from a Cloudflare Worker with a D1 database and a job that runs every minute. Without an account it keeps when to remind a device, never what about: the notification carries an id, and the device fills in the words when it arrives.
 - **Heavy work on a Mac, through a tunnel.** Splitting a song into parts and timing its words needs a real machine, so it runs on a Mac at home, reached through a Cloudflare Tunnel. The Mac makes the connection outward, so no port is open at home.
-- **Private apps behind Cloudflare Access.** A private app asks for a code sent to an email on its list, and one sign-in covers every private app. Public apps have no sign-in at all.
+- **Private apps behind Cloudflare Access.** A private app asks for a code sent to an email on its list, and one sign-in covers every private app. A program can get in too, with a service token of its own, as Kickoff's command does from the Mac. Public apps have no sign-in at all.
 - **One subdomain per app.** Each app has its own address, so each keeps its own storage, its own home-screen icon and its own offline copy.
 
 Hosting all of it costs nothing today.
