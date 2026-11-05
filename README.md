@@ -32,6 +32,34 @@ It also keeps the screen awake while a song is open, counts you in, loops a sect
 
 **How it's built:** a home-screen web app (React, TypeScript, Web Audio, IndexedDB) plus a helper on a Mac for the heavy work. Demucs splits a song into parts, Whisper times every word against the vocals, librosa finds the beat, and a pitch shifter (Signalsmith Stretch) keeps slowed-down parts in key. Songs, versions and backing parts are kept on the iPad, so a saved song plays while the Mac sleeps.
 
+### Kickoff
+
+A planner where a unit of work is one Claude Code chat: every project keeps its next chat written and waiting, and you book them onto days. **Private: it plans one person's own work.**
+
+- **The next chat, always written.** Each project has one, a title and a brief: the goal, where to start, when it's done and the first step. The chat that last worked on the project writes it before it ends, so no chat starts from nothing.
+- **Booked onto days.** Tap a project on the shelf to book its next chat for today, tomorrow or any day, with a time if you want a reminder then. There's no cap and no red: a chat you didn't get to turns grey and comes first on the shelf next time.
+- **Start, then Enter.** On the Mac, Start opens the Claude desktop app on a new chat in the project's folder with the brief already in the box. On the phone, Copy prompt copies it for a chat that's already open.
+- **Chats keep it up to date.** As a chat ends, it marks itself done with one line on what got done, writes its project's next chat and offers to book it, all through a small `kickoff` command.
+- **The month fills in.** Year, Month, Week and Day show the chats in their projects' colours, and a done one keeps its line and a link that reopens the chat.
+- **Reminders, shifts and deadlines.** A booked time sends a notification. A weekly work shift and course deadlines from Canvas show on their days.
+- **Quiet sound and motion.** A soft sound when a chat starts, lands on a day or turns done while the page is open. Sheets rise and settle, and pages slide the way you went.
+
+![Kickoff on a laptop on a Thursday: two chats done with their one-line results, one started at 14:10, one waiting for 16:30 with Start and Copy prompt, and the shelf of every project's next chat beside the day](images/kickoff-laptop-day.jpg)
+
+![November in Kickoff: each day's chats in their projects' colours, done ones filled in, booked ones dashed, one not started in grey, and a midterm marked on the 26th](images/kickoff-laptop-month.jpg)
+
+<p align="center">
+  <img src="images/kickoff-phone-today.jpg" width="250" alt="Kickoff on a phone: the week on top with a dot per chat, then today's chats, done, started and one waiting with Copy prompt">
+  &nbsp;
+  <img src="images/kickoff-phone-brief.jpg" width="250" alt="A project's next chat open on a phone: its one-line title and its brief, with the goal, where to start and where it stands">
+  &nbsp;
+  <img src="images/kickoff-phone-motion.gif" width="250" alt="On a phone: a chat booked from the shelf drops into today, a chat in progress turns done with its line, and Copy prompt starts the new one">
+</p>
+
+The pictures show a made-up plan.
+
+**How it's built:** a home-screen web app (React, TypeScript, Vite) that keeps an offline copy of the plan and a queue of changes not yet sent, so it opens and books without a connection. A Cloudflare Worker with a D1 database keeps the plan behind Cloudflare Access, and a job that runs every minute sends the reminders as web push. Start is a `claude://code/new?q=` link, which the Claude desktop app opens as a new Code chat with the prompt typed in, not yet sent. The `kickoff` command has its own Access service token, and the Worker lets it do four things only: read the plan, write a next chat, book one and mark one done. The pages, the month tabs and the looks come from Planner.
+
 ### [Gemlight](https://gemlight.zlex.me)
 
 A puzzle game: nine pieces with holes in them, a frame of 36 squares and ten gem marks. Fit every piece so each gem shows through a hole and lights up, with no two pieces of one colour touching. Every puzzle has exactly one solution: a Daily for everyone, a Journey from easy to hard, Endless, and a Race for two on one screen. Free, no account, plays offline. **Play it at [gemlight.zlex.me](https://gemlight.zlex.me)**; Google Play is next.
