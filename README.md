@@ -34,11 +34,13 @@ Six quick games for 2 to 8 players: Balloons, Swap, Sea battle, Pin, Hide and Fl
   <img src="images/party-phone-seabattle.jpg" width="300" alt="Sea battle in Practice on a phone: hide your fleet of five ships on the grid, then Shuffle or Ready, start">
 </p>
 
+**An Install button in Play's Settings,** for the puzzles and the party games: one click in Chrome and Edge, the steps for your device in Safari, and gone once it's installed.
+
 **How Play is built:** Vite, React and TypeScript, served by one Cloudflare Worker with static assets. Each room is a Durable Object found by its code, holding every phone's connection, so a quiet room sleeps and costs nothing. The room referees every move; the phones only draw.
 
 ### [Gemlight](https://gemlight.zlex.me)
 
-A puzzle game: nine pieces with holes in them, a frame of 36 squares and ten gem marks. Fit every piece so each gem shows through a hole and lights up, with no two pieces of one colour touching. Every puzzle has exactly one solution: a Daily for everyone, a Journey from easy to hard, Endless, and a Race for two on one screen. Free, no account, plays offline. **Play it at [gemlight.zlex.me](https://gemlight.zlex.me)**; Google Play is next.
+A puzzle game: nine pieces with holes in them, a frame of 36 squares and ten gem marks. Fit every piece so each gem shows through a hole and lights up, with no two pieces of one colour touching. Every puzzle has exactly one solution: a Daily for everyone, a Journey from easy to hard, Endless, and a Race for two on one screen. Free, no account, plays offline. **Play it at [gemlight.zlex.me](https://gemlight.zlex.me)**; Google Play is next. Its Settings has an Install button: one click in Chrome and Edge, the steps for your device in Safari, and gone once it's installed.
 
 ![Gemlight on an iPad, today's Daily mid-game: six pieces in the frame with gem marks lit through their holes, three pieces left in the tray](images/gemlight-ipad.jpg)
 
@@ -63,6 +65,7 @@ A calendar you draw on, made for the iPad and its Pencil. Each month is a real s
 - **Events and reminders.** Times, repeats and birthdays, as real notifications once it's on the Home Screen.
 - **Extras you switch on:** moods, habits, school deadlines, countdowns, moon phases, a sticker maker and more. A private one stays hidden until you ask, never shows on a saved page, and can be locked with a PIN.
 - **Yours to keep.** Any page saves as a picture or a PDF, and one backup file holds everything.
+- **An Install button in Settings:** one click in Chrome and Edge, the steps for your device in Safari, and gone once it's installed.
 
 ![Planner on an iPad: December on pink gingham, with handwriting in the boxes, an arrow drawn across a week, washi tape over two days, stickers, and events such as Yoga 18:00 and Dentist 10:30](images/planner-ipad-month.jpg)
 
@@ -87,7 +90,7 @@ A guitar songbook, laid out for the iPad. **Private for now; a public version is
 - **Strumming patterns lit in time.** The pattern for the part being played, each stroke lit on the beat.
 - **Set lists and favourites.** Lists to fill and play in order, with the next song one tap away.
 
-It also keeps the screen awake while a song is open, counts you in, loops a section, and opens without a connection.
+It also keeps the screen awake while a song is open, counts you in, loops a section, and opens without a connection. Its Settings has an Install button: one click in Chrome and Edge, the steps for your device in Safari, and gone once it's installed.
 
 ![The mixer over a playing song: presets (whole song, just vocals, melody guide, no vocals, no guitar, your mix), a volume for each part and the speed at 80%](images/strum-mixer.jpg)
 
@@ -109,7 +112,7 @@ Daily tasks: a shift that says if the rest still fits, plus to-dos, routines and
 - **To-dos with reminders, and routines** that come back on their days.
 - **Lists two people can share,** such as the groceries.
 
-Made for a phone, and it works offline.
+Made for a phone, and it works offline. Its Settings has an Install button: one click in Chrome and Edge, the steps for your device in Safari, and gone once it's installed.
 
 <p align="center">
   <img src="images/rounds-phone-shift.jpg" width="250" alt="Rounds on a phone during a made-up Saturday shift at a café: 2 h 40 spare, 4 of 11 tasks done, the front of house finished and the kitchen started">
@@ -134,6 +137,7 @@ A planner where a unit of work is one Claude Code chat: every project keeps its 
 - **The month fills in.** Year, Month, Week and Day show the chats in their projects' colours, and a done one keeps its line and a link that reopens the chat.
 - **Reminders, shifts and deadlines.** A booked time sends a notification. A weekly work shift and course deadlines from Canvas show on their days.
 - **Quiet sound and motion.** A soft sound when a chat starts, lands on a day or turns done while the page is open. Sheets rise and settle, and pages slide the way you went.
+- **An Install button in Settings:** one click in Chrome and Edge, the steps for your device in Safari, and gone once it's installed.
 
 ![Kickoff on a laptop on a Thursday: two chats done with their one-line results, one started at 14:10, one waiting for 16:30 with Start and Copy prompt, and the shelf of every project's next chat beside the day](images/kickoff-laptop-day.jpg)
 
@@ -176,7 +180,6 @@ Hosting all of it costs nothing today.
 
 ## What's next
 
-- **An Install button in each app:** one click where the browser allows it (Chrome and Edge), and where it doesn't (Safari), a short note on where to tap.
 - **Gemlight on Google Play:** the same web app, packaged for Android.
 - **A public Strum:** being planned, including what it takes to split songs for everyone instead of on one Mac.
 - **No accounts to start:** progress stays on each device. Sign-in comes only when an app needs it, to sync between devices or to play together.
