@@ -157,9 +157,9 @@ The pictures show a made-up plan.
 
 ## The start page: [apps.zlex.me](https://apps.zlex.me)
 
-One address for everything: a tile per app with its icon, its name and a line about it, opening the app at its own address. Each app keeps its own icon and its own progress, so the start page is where you find the apps, not where you play them. It's open to everyone and shows the public apps. Signed in, you also see the private apps you have, marked Yours, and no others, so nobody is sent to a sign-in they can't pass. A Showcase page shows every game and app in this order, with screenshots, next to a short form to ask for access, and each app's own page has an Install guide that opens on your device.
+One page for every game and app. It opens on a hand of cards, one per app, dealt in as the page loads; tap one to jump to its card below. Then come Games and Apps, in this order, each on a full-length card with its screenshots, its icon, its name and a line about it. Most cards lead to the app's own page, with more pictures and an Install guide that opens on your device, and a small Play or Open beside See more opens the app itself. Each app keeps its own icon and its own progress, so the start page is where you find the apps, not where you play them. It's open to everyone and shows every game and app. Signed in, the private apps you have come first, marked Yours. The other private apps show a padlock and lead to their own page or to a short form to ask for access, so nobody is sent to a sign-in they can't pass.
 
-**How it's built:** plain HTML, CSS and JavaScript, no framework and no build step. One data file lists the apps. A small Cloudflare Worker answers who is signed in and takes the form's posts, behind a Turnstile check and a rate limit.
+**How it's built:** plain HTML, CSS and JavaScript, no framework and no build step. One data file lists the apps. The hand is plain CSS, dealt once and held still for anyone who asks for less motion, and the pictures further down load as you scroll, so the page stays light on a phone. A small Cloudflare Worker answers who is signed in and takes the form's posts, behind a Turnstile check and a rate limit.
 
 ## How it's hosted
 
@@ -183,6 +183,6 @@ Hosting all of it costs nothing today.
 - **Gemlight on Google Play:** the same web app, packaged for Android.
 - **A public Strum:** being planned, including what it takes to split songs for everyone instead of on one Mac.
 - **No accounts to start:** progress stays on each device. Sign-in comes only when an app needs it, to sync between devices or to play together.
-- **Each new game or app** starts as a written concept, gets its own subdomain and lands on the start page as one tile.
+- **Each new game or app** starts as a written concept, gets its own subdomain and lands on the start page as one card.
 
 The apps' code is private; this repo is their showcase.
